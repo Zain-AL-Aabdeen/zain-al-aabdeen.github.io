@@ -3,103 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zain Al-Aabdeen | Portfolio</title>
+    <title>Zain Al-Aabdeen | Backend & AI Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- الهيدر والقائمة -->
+    <!-- Navigation Bar -->
     <header>
         <nav class="container">
             <div class="logo">Zain<span>.dev</span></div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- قسم التعريف الشخصي -->
+    <!-- Hero Section -->
     <section id="hero" class="container">
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Zain Al-Aabdeen</span></h1>
-            <h2>Software Engineer & Backend / AI Developer</h2>
-            <p>Passionate about building scalable backend systems, machine learning models, and efficient clean code.</p>
+            <h2>Backend Web & AI Developer</h2>
+            <p>Building clean RESTful APIs, integrating machine learning models, and writing scalable Python applications.</p>
             <div class="hero-btns">
-                <a href="#projects" class="btn primary-btn">View Projects</a>
-                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
             </div>
         </div>
     </section>
 
-    <!-- قسم عني -->
+    <!-- About Section -->
     <section id="about" class="container">
         <h2 class="section-title">About Me</h2>
         <p class="about-text">
-            I am a Software Engineering student focused on Backend Development with Django/Python and Deep Learning model integration. 
-            I love solving algorithmic problems, working with databases, and building end-to-end applications.
+            Computer Software Engineering student focused on backend systems and applied machine learning. 
+            Experienced in building RESTful services using Python and Django, implementing secure authentication (JWT), and integrating trained deep learning models into production-ready web APIs.
         </p>
     </section>
 
-    <!-- قسم المهارات -->
+    <!-- Tech Stack / Skills Section (الخبرات الواقعية فقط) -->
     <section id="skills" class="container">
-        <h2 class="section-title">Skills & Technologies</h2>
-        <div class="skills-grid">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Django & REST API</div>
-            <div class="skill-card">PyTorch & Scikit-learn</div>
-            <div class="skill-card">SQL / Databases</div>
-            <div class="skill-card">Git & GitHub</div>
-            <div class="skill-card">C++ / Java</div>
+        <h2 class="section-title">Technical Skills</h2>
+        
+        <div class="skills-category">
+            <h3>Backend & Web Development</h3>
+            <div class="skills-grid">
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Django Framework</div>
+                <div class="skill-card">Django REST Framework</div>
+                <div class="skill-card">JWT Authentication</div>
+                <div class="skill-card">RESTful APIs & Swagger</div>
+                <div class="skill-card">SQL / Databases</div>
+            </div>
+        </div>
+
+        <div class="skills-category" style="margin-top: 2rem;">
+            <h3>Machine Learning & Data</h3>
+            <div class="skills-grid">
+                <div class="skill-card">PyTorch</div>
+                <div class="skill-card">Scikit-learn</div>
+                <div class="skill-card">Pandas & NumPy</div>
+                <div class="skill-card">Jupyter Notebooks</div>
+            </div>
+        </div>
+
+        <div class="skills-category" style="margin-top: 2rem;">
+            <h3>Core Concepts & Tools</h3>
+            <div class="skills-grid">
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">Java & Parallel Programming</div>
+                <div class="skill-card">C++ Core Concepts</div>
+            </div>
         </div>
     </section>
 
-    <!-- قسم المشاريع -->
+    <!-- Projects Section (المشروع الحقيقي المتوفر حالياً) -->
     <section id="projects" class="container">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
             
-            <!-- كارت مشروع 1 -->
+            <!-- Real Estate Prediction Project -->
             <div class="project-card">
-                <h3>Real Estate Price Predictor</h3>
-                <p>Full-stack web application with Django backend, ML model integration, and React frontend.</p>
+                <div class="card-header">
+                    <h3>Real Estate Price Prediction System</h3>
+                    <span class="badge">Full-Stack & ML</span>
+                </div>
+                <p>
+                    An end-to-end web system featuring a Django backend divided into authentication (`auth_app`) and prediction modules (`prediction_app`). Integrated a machine learning model for property price estimation with a React frontend and API documentation via Swagger.
+                </p>
                 <div class="tech-stack">
-                    <span>Python</span><span>Django</span><span>React</span><span>Scikit-learn</span>
+                    <span>Python</span><span>Django</span><span>Scikit-learn</span><span>React</span><span>JWT</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/Zain-AL-Aabdeen" target="_blank">View Code</a>
-                </div>
-            </div>
-
-            <!-- كارت مشروع 2 (قيد العمل) -->
-            <div class="project-card">
-                <h3>Upcoming Backend / AI System</h3>
-                <p>Developing scalable REST APIs with JWT authentication and deep learning pipelines.</p>
-                <div class="tech-stack">
-                    <span>Django</span><span>PyTorch</span><span>Swagger</span>
-                </div>
-                <div class="project-links">
-                    <a href="#">In Progress...</a>
+                    <a href="https://github.com/Zain-AL-Aabdeen" target="_blank" class="project-link">View Source Code →</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- قسم التواصل -->
+    <!-- Contact Section -->
     <section id="contact" class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <p>Feel free to reach out for collaborations or opportunities!</p>
+        <h2 class="section-title">Get In Touch</h2>
+        <p>I am open to backend development and machine learning project opportunities.</p>
         <div class="contact-links">
-            <a href="mailto:zenmohammad606@gmail.com" class="btn primary-btn">Send Email</a>
-            <a href="https://github.com/Zain-AL-Aabdeen" target="_blank" class="btn secondary-btn">GitHub</a>
+            <a href="https://github.com/Zain-AL-Aabdeen" target="_blank" class="btn primary-btn">GitHub Profile</a>
+            <a href="#contact" class="btn secondary-btn">LinkedIn Profile</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Zain Al-Aabdeen. Built & Hosted on Vercel.</p>
+        <p>© 2026 Zain Al-Aabdeen. Built with clean HTML/CSS & hosted on Vercel.</p>
     </footer>
 
 </body>
