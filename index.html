@@ -1,11 +1,106 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zain's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Al-Aabdeen | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>مرحباً بك في موقعي الشخصي</h1>
-    <p>الموقع قيد الإنشاء...</p>
+
+    <!-- الهيدر والقائمة -->
+    <header>
+        <nav class="container">
+            <div class="logo">Zain<span>.dev</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم التعريف الشخصي -->
+    <section id="hero" class="container">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Zain Al-Aabdeen</span></h1>
+            <h2>Software Engineer & Backend / AI Developer</h2>
+            <p>Passionate about building scalable backend systems, machine learning models, and efficient clean code.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn">View Projects</a>
+                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عني -->
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            I am a Software Engineering student focused on Backend Development with Django/Python and Deep Learning model integration. 
+            I love solving algorithmic problems, working with databases, and building end-to-end applications.
+        </p>
+    </section>
+
+    <!-- قسم المهارات -->
+    <section id="skills" class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Django & REST API</div>
+            <div class="skill-card">PyTorch & Scikit-learn</div>
+            <div class="skill-card">SQL / Databases</div>
+            <div class="skill-card">Git & GitHub</div>
+            <div class="skill-card">C++ / Java</div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section id="projects" class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            
+            <!-- كارت مشروع 1 -->
+            <div class="project-card">
+                <h3>Real Estate Price Predictor</h3>
+                <p>Full-stack web application with Django backend, ML model integration, and React frontend.</p>
+                <div class="tech-stack">
+                    <span>Python</span><span>Django</span><span>React</span><span>Scikit-learn</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Zain-AL-Aabdeen" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <!-- كارت مشروع 2 (قيد العمل) -->
+            <div class="project-card">
+                <h3>Upcoming Backend / AI System</h3>
+                <p>Developing scalable REST APIs with JWT authentication and deep learning pipelines.</p>
+                <div class="tech-stack">
+                    <span>Django</span><span>PyTorch</span><span>Swagger</span>
+                </div>
+                <div class="project-links">
+                    <a href="#">In Progress...</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Feel free to reach out for collaborations or opportunities!</p>
+        <div class="contact-links">
+            <a href="mailto:zenmohammad606@gmail.com" class="btn primary-btn">Send Email</a>
+            <a href="https://github.com/Zain-AL-Aabdeen" target="_blank" class="btn secondary-btn">GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Zain Al-Aabdeen. Built & Hosted on Vercel.</p>
+    </footer>
+
 </body>
 </html>
