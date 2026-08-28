@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zain Al-Aabdeen | Backend & AI Developer</title>
     <link rel="stylesheet" href="style.css">
+    <!-- 1. إضافة الـ CSS الخاص بمكتبة AOS للأنيميشن -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <header>
         <nav class="container">
-            <div class="logo">Zain<span>.dev</span></div>
-            <ul class="nav-links">
+            <!-- أنيميشن ظهور من اليمين للوغو -->
+            <div class="logo" data-aos="fade-right">Zain<span>.dev</span></div>
+            <!-- أنيميشن ظهور من اليسار للقائمة -->
+            <ul class="nav-links" data-aos="fade-left">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Tech Stack</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -23,7 +27,8 @@
 
     <!-- Hero Section -->
     <section id="hero" class="container">
-        <div class="hero-content">
+        <!-- أنيميشن ظهور من الأسفل مع تأخير بسيط -->
+        <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
             <h1>Hi, I'm <span class="highlight">Zain Al-Aabdeen</span></h1>
             <h2>Backend Web & AI Developer</h2>
             <p>Building clean RESTful APIs, integrating machine learning models, and writing scalable Python applications.</p>
@@ -36,56 +41,60 @@
 
     <!-- About Section -->
     <section id="about" class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="about-text">
+        <!-- أنيميشن ظهور من الأسفل -->
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <!-- أنيميشن ظهور من الأسفل مع تأخير -->
+        <p class="about-text" data-aos="fade-up" data-aos-delay="200">
             Computer Software Engineering student focused on backend systems and applied machine learning. 
             Experienced in building RESTful services using Python and Django, implementing secure authentication (JWT), and integrating trained deep learning models into production-ready web APIs.
         </p>
     </section>
 
-    <!-- Tech Stack / Skills Section (الخبرات الواقعية فقط) -->
+    <!-- Tech Stack / Skills Section -->
     <section id="skills" class="container">
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
         
         <div class="skills-category">
-            <h3>Backend & Web Development</h3>
+            <h3 data-aos="fade-up">Backend & Web Development</h3>
             <div class="skills-grid">
-                <div class="skill-card">Python</div>
-                <div class="skill-card">Django Framework</div>
-                <div class="skill-card">Django REST Framework</div>
-                <div class="skill-card">JWT Authentication</div>
-                <div class="skill-card">RESTful APIs & Swagger</div>
-                <div class="skill-card">SQL / Databases</div>
+                <!-- أنيميشن ظهور من الأسفل مع تأخير مختلف لكل مهارة -->
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">Python</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="150">Django Framework</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">Django REST Framework</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="250">JWT Authentication</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">RESTful APIs & Swagger</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="350">SQL / Databases</div>
             </div>
         </div>
 
         <div class="skills-category" style="margin-top: 2rem;">
-            <h3>Machine Learning & Data</h3>
+            <h3 data-aos="fade-up">Machine Learning & Data</h3>
             <div class="skills-grid">
-                <div class="skill-card">PyTorch</div>
-                <div class="skill-card">Scikit-learn</div>
-                <div class="skill-card">Pandas & NumPy</div>
-                <div class="skill-card">Jupyter Notebooks</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">PyTorch</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="150">Scikit-learn</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">Pandas & NumPy</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="250">Jupyter Notebooks</div>
             </div>
         </div>
 
         <div class="skills-category" style="margin-top: 2rem;">
-            <h3>Core Concepts & Tools</h3>
+            <h3 data-aos="fade-up">Core Concepts & Tools</h3>
             <div class="skills-grid">
-                <div class="skill-card">Git & GitHub</div>
-                <div class="skill-card">Java & Parallel Programming</div>
-                <div class="skill-card">C++ Core Concepts</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">Git & GitHub</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="150">Java & Parallel Programming</div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">C++ Core Concepts</div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section (المشروع الحقيقي المتوفر حالياً) -->
+    <!-- Projects Section -->
     <section id="projects" class="container">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
         <div class="projects-grid">
             
             <!-- Real Estate Prediction Project -->
-            <div class="project-card">
+            <!-- أنيميشن ظهور من الأسفل للكارد بالكامل -->
+            <div class="project-card" data-aos="fade-up">
                 <div class="card-header">
                     <h3>Real Estate Price Prediction System</h3>
                     <span class="badge">Full-Stack & ML</span>
@@ -106,9 +115,9 @@
 
     <!-- Contact Section -->
     <section id="contact" class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p>I am open to backend development and machine learning project opportunities.</p>
-        <div class="contact-links">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <p data-aos="fade-up">I am open to backend development and machine learning project opportunities.</p>
+        <div class="contact-links" data-aos="fade-up" data-aos-delay="200">
             <a href="https://github.com/Zain-AL-Aabdeen" target="_blank" class="btn primary-btn">GitHub Profile</a>
             <a href="#contact" class="btn secondary-btn">LinkedIn Profile</a>
         </div>
@@ -118,5 +127,14 @@
         <p>© 2026 Zain Al-Aabdeen. Built with clean HTML/CSS & hosted on Vercel.</p>
     </footer>
 
+    <!-- 2. إضافة الـ JavaScript الخاص بمكتبة AOS وتفعيلها -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // تفعيل المكتبة مع إعدادات افتراضية
+        AOS.init({
+            duration: 1000, // مدة الانيميشن (ملي ثانية)
+            once: true, // تخلي الانيميشن يصير مرة وحدة بس مو كل ما تنزل وتطلع
+        });
+    </script>
 </body>
 </html>

@@ -3,12 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* إضافة تمرير سلس عند الضغط على روابط القائمة */
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #0b0f19;
     color: #e2e8f0;
     line-height: 1.6;
+    /* منع ظهور شريط تمرير أفقي بسبب الانيميشن */
+    overflow-x: hidden;
 }
 
 .container {
@@ -40,7 +44,7 @@ nav {
 .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
 .nav-links a:hover { color: #38bdf8; }
 
-#hero { padding: 4rem 1.5rem; }
+#hero { padding: 4rem 1.5rem; min-height: 80vh; display: flex; align-items: center; }
 h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
 h2 { font-size: 1.3rem; color: #94a3b8; font-weight: 500; margin-bottom: 1rem; }
 .highlight { color: #38bdf8; }
@@ -75,6 +79,13 @@ h2 { font-size: 1.3rem; color: #94a3b8; font-weight: 500; margin-bottom: 1rem; }
     border: 1px solid #334155;
     font-size: 0.95rem;
     color: #e2e8f0;
+    /* أنيميشن بسيط عند تمرير الماوس على المهارة */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
 }
 
 .projects-grid { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -84,6 +95,14 @@ h2 { font-size: 1.3rem; color: #94a3b8; font-weight: 500; margin-bottom: 1rem; }
     padding: 1.8rem;
     border-radius: 10px;
     border: 1px solid #334155;
+    /* أنيميشن بسيط عند تمرير الماوس على المشروع */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
 }
 
 .card-header {
@@ -124,11 +143,15 @@ h2 { font-size: 1.3rem; color: #94a3b8; font-weight: 500; margin-bottom: 1rem; }
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: 0.3s;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
 }
 
 .primary-btn { background-color: #38bdf8; color: #0f172a; }
-.primary-btn:hover { background-color: #0284c7; color: #fff; }
+.primary-btn:hover { background-color: #0284c7; color: #fff; box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3); }
 
 .secondary-btn { border: 1px solid #38bdf8; color: #38bdf8; }
 .secondary-btn:hover { background-color: rgba(56, 189, 248, 0.1); }
@@ -140,4 +163,21 @@ footer {
     border-top: 1px solid #1e293b;
     margin-top: 3rem;
     font-size: 0.85rem;
+}
+
+/* إعدادات للأجهزة الذكية */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .nav-links { gap: 0.8rem; }
+    .nav-links a { font-size: 0.85rem; }
+    .logo { font-size: 1.2rem; }
+    .container { padding: 1.5rem 1rem; }
+    /* إيقاف بعض الانيميشنات الثقيلة على الموبايل لضمان الأداء */
+    [data-aos] {
+        pointer-events: none !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+    }
 }
