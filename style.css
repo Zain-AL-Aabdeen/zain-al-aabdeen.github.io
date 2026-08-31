@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -110,12 +110,12 @@ nav {
 .info-side h2 { font-size: 1.2rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.2rem; }
 .highlight { 
     color: #38bdf8; 
-    text-shadow: 0 0 15px rgba(56, 189, 248, 0.7), 0 0 25px rgba(56, 189, 248, 0.4); 
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.35); 
 }
 
 .quick-stats-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
     margin-bottom: 1.5rem;
 }
@@ -123,12 +123,19 @@ nav {
 .stat-card {
     background: rgba(15, 23, 42, 0.6);
     border: 1px solid rgba(56, 189, 248, 0.2);
+    border-left: 3px solid #38bdf8;
     padding: 0.7rem 1rem;
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
+
+.stat-card:nth-child(2) {
+    border-left: 3px solid #a855f7;
+}
+
+.stat-card:nth-child(2) i { color: #a855f7; }
 
 .stat-card i { font-size: 1.3rem; color: #38bdf8; }
 .stat-card strong { font-size: 0.85rem; color: #f8fafc; }
@@ -143,7 +150,7 @@ nav {
 
 .social-links-bar a {
     color: #94a3b8;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     transition: 0.3s;
 }
 
@@ -224,6 +231,6 @@ footer {
 
 @media (max-width: 768px) {
     .hero-wrapper { flex-direction: column; text-align: center; }
-    .quick-stats-grid { text-align: left; }
+    .quick-stats-grid { grid-template-columns: 1fr; text-align: left; }
     .social-links-bar, .hero-btns { justify-content: center; }
 }
