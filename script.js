@@ -3,6 +3,10 @@ const ctx = canvas.getContext('2d');
 
 let width, height;
 let particles = [];
+let animationId = null;
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const MAX_PARTICLES = 90;
 
 function initCanvas() {
     width = canvas.width = window.innerWidth;
@@ -39,7 +43,7 @@ class Particle {
 
 function createParticles() {
     particles = [];
-    const count = Math.floor((width * height) / 12000);
+    const count = Math.min(Math.floor((width * height) / 12000), MAX_PARTICLES);
     for (let i = 0; i < count; i++) {
         particles.push(new Particle());
     }
@@ -66,23 +70,57 @@ function connectParticles() {
     }
 }
 
-function animate() {
+function drawStaticFrame() {
     ctx.clearRect(0, 0, width, height);
-    
+    particles.forEach(p => p.draw());
+    connectParticles();
+}
+
+function animate() {
+    if (document.hidden) {
+        animationId = null;
+        return;
+    }
+
+    ctx.clearRect(0, 0, width, height);
+
     particles.forEach(p => {
         p.update();
         p.draw();
     });
-    
+
     connectParticles();
-    requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
+}
+
+function startAnimation() {
+    if (animationId === null && !document.hidden) {
+        animationId = requestAnimationFrame(animate);
+    }
 }
 
 window.addEventListener('resize', () => {
     initCanvas();
     createParticles();
+    if (prefersReducedMotion) drawStaticFrame();
+});
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        if (animationId !== null) {
+            cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+    } else if (!prefersReducedMotion) {
+        startAnimation();
+    }
 });
 
 initCanvas();
 createParticles();
-animate();
+
+if (prefersReducedMotion) {
+    drawStaticFrame();
+} else {
+    startAnimation();
+}

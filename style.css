@@ -97,7 +97,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
-    white-space: nowrap;
+    text-align: center;
 }
 
 .pulse-dot {
@@ -157,11 +157,6 @@ nav {
     transition: 0.3s;
 }
 
-.social-links-bar a:hover {
-    color: #38bdf8;
-    transform: translateY(-2px);
-}
-
 .section-title {
     font-size: 1.8rem;
     color: #f8fafc;
@@ -189,10 +184,25 @@ nav {
     transition: 0.3s;
 }
 
-.skill-card:hover {
-    border-color: #38bdf8;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
-    transform: translateY(-3px);
+@media (hover: hover) {
+    .skill-card:hover {
+        border-color: #38bdf8;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+        transform: translateY(-3px);
+    }
+
+    .social-links-bar a:hover {
+        color: #38bdf8;
+        transform: translateY(-2px);
+    }
+
+    .glow-btn:hover { background-color: #7dd3fc; transform: translateY(-2px); }
+    .secondary-btn:hover { background-color: rgba(56, 189, 248, 0.15); transform: translateY(-2px); }
+
+    .glow-card:hover {
+        box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+        transform: translateY(-4px);
+    }
 }
 
 .project-card {
@@ -200,6 +210,23 @@ nav {
     border-radius: 12px;
     border: 1px solid rgba(56, 189, 248, 0.2);
     backdrop-filter: blur(8px);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+
+.glow-card {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+    transition: 0.3s;
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 .hero-btns, .contact-buttons-grid { display: flex; gap: 1rem; }
@@ -218,10 +245,8 @@ nav {
 
 .primary-btn { background-color: #38bdf8; color: #050a14; }
 .glow-btn { box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-.glow-btn:hover { background-color: #7dd3fc; transform: translateY(-2px); }
 
 .secondary-btn { border: 1px solid #38bdf8; color: #38bdf8; background: transparent; }
-.secondary-btn:hover { background-color: rgba(56, 189, 248, 0.15); transform: translateY(-2px); }
 
 footer {
     text-align: center;
@@ -252,6 +277,8 @@ footer {
     .avatar-glow { width: 150px; height: 150px; }
     .hero-btns { flex-direction: column; width: 100%; }
     .hero-btns .btn { width: 100%; justify-content: center; }
+    .contact-buttons-grid { flex-direction: column; width: 100%; }
+    .contact-buttons-grid .btn { width: 100%; justify-content: center; }
     .social-links-bar { gap: 1rem; flex-wrap: wrap; }
     .skills-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
     .section-title { font-size: 1.5rem; }
