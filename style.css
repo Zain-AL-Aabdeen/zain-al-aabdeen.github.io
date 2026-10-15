@@ -229,22 +229,25 @@ nav {
 
 .project-img-wrapper {
     width: 100%;
-    height: 240px;
-    overflow: hidden;
     background: #0b1329;
     border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
 }
 
 .project-mockup-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 8px;
     transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-mockup-img {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .project-content {
