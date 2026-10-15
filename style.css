@@ -205,7 +205,7 @@ nav {
     }
 }
 
-/* Projects Section Styling (Vertical Stack) */
+/* Projects Section Styling */
 .projects-list {
     display: flex;
     flex-direction: column;
@@ -228,16 +228,18 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     border-bottom: 1px solid rgba(56, 189, 248, 0.15);
 }
 
 .project-mockup-img {
     width: 100%;
     height: auto;
-    max-height: 600px;
-    object-fit: contain;
-    border-radius: 10px;
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: unset;
     transition: transform 0.4s ease;
 }
 
