@@ -22,21 +22,6 @@ body {
 
 img { max-width: 100%; height: auto; }
 
-/* Accessibility */
-.skip-link {
-    position: absolute;
-    left: 1rem;
-    top: -4rem;
-    background: #38bdf8;
-    color: #050a14;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-weight: 600;
-    z-index: 200;
-    text-decoration: none;
-}
-.skip-link:focus { top: 0.75rem; }
-
 #particles-canvas {
     position: fixed;
     top: 0;
@@ -71,14 +56,11 @@ header {
 nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 1rem 1.5rem !important;
     row-gap: 0.5rem;
 }
-
-.logo { font-size: 1.4rem; font-weight: 700; color: #fff; text-decoration: none; }
-.logo span { color: #38bdf8; text-shadow: 0 0 10px rgba(56, 189, 248, 0.6); }
 
 .nav-links { display: flex; flex-wrap: wrap; list-style: none; gap: 1.5rem; justify-content: center; }
 .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; transition: 0.3s; padding: 0.25rem 0; display: inline-block; }
